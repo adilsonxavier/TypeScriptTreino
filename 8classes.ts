@@ -25,6 +25,10 @@ class Person {
     let mainhavar = 5;
     //****** */
 
+        // alterações na master por outra maquina2
+        let mainhavar2 = 5;
+        //****** */
+
 let person = new Person("171280926", 'adilson', 'Xavier');
 console.log(person.getFullName());
 console.log(person.getSsn());
