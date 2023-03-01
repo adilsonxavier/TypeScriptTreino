@@ -28,5 +28,5 @@ class Person {
    
 }
 
-console.log(person.getFullName());
-console.log(person.getSsn());
+// console.log(person.getFullName());
+// console.log(person.getSsn());
