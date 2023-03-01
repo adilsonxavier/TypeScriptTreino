@@ -9,6 +9,8 @@ class Person {
         this.lastName = lastName;
     }
 
+
+
     getFullName(): string {
         return `${this.firstName} ${this.lastName}`;
     }
@@ -19,7 +21,10 @@ class Person {
 s
    
 }
-
+    // alterações na master por outra maquina
+    let mainhavar = 5;
+    //****** */
+    
 let person = new Person("171280926", 'adilson', 'Doe');
 console.log(person.getFullName());
 console.log(person.getSsn());
