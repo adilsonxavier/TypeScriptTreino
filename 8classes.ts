@@ -18,13 +18,13 @@ class Person {
     getSsn():string {
         return this.ssn;
     }
-s
+// tirado um s
    
 }
     // alterações na master por outra maquina
     let mainhavar = 5;
     //****** */
-    
-let person = new Person("171280926", 'adilson', 'Doe');
+
+let person = new Person("171280926", 'adilson', 'Xavier');
 console.log(person.getFullName());
 console.log(person.getSsn());
