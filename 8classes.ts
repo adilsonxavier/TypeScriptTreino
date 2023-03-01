@@ -4,6 +4,12 @@ class Person {
     lastName: string;
 
     constructor(ssn: string, firstName: string, lastName: string) {
+  
+     /** Não entendi por que mas declarando os argumentos do construtor como private não precisou declarar
+      * aws variáveis acima nem os this. abaixo
+      */
+
+   // constructor(private ssn: string, private firstName: string, private lastName: string) {        
         this.ssn = ssn;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -15,20 +21,12 @@ class Person {
         return `${this.firstName} ${this.lastName}`;
     }
 
-    getSsn():string {
+    getSsn():any {
         return this.ssn;
     }
 // tirado um s
    
 }
-    // alterações na master por outra maquina
-    let mainhavar = 5;
-    //****** */
 
-        // alterações na master por outra maquina2
-        let mainhavar2 = 5;
-        //****** */
-
-let person = new Person("171280926", 'adilson', 'Xavier');
 console.log(person.getFullName());
 console.log(person.getSsn());
