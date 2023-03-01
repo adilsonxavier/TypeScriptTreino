@@ -24,8 +24,44 @@ var meuarray = [7, 8, 9, 10];
 console.log(getRandomElement(meuarray));
 /////////////////////////////////////////
 //Generic functions with multiple types
+var Classe1 = /** @class */ (function () {
+    function Classe1(name) {
+        this.name = name;
+    }
+    return Classe1;
+}());
+var Classe2 = /** @class */ (function () {
+    function Classe2(jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+    return Classe2;
+}());
+var obj1 = new Classe1("adilson");
+var obj2 = new Classe2("dev");
 function merge(obj1, obj2) {
     return __assign(__assign({}, obj1), obj2);
 }
-var result = merge({ name: 'John' }, { jobTitle: 'Frontend Developer' });
-console.log(JSON.stringify(result));
+var result = merge(obj1, obj2);
+console.log(JSON.stringify(result)); // {"name":"adilson","jobTitle":"dev"}
+// Aqui o método merge usou inferência para saber que o primeiro parâmetro é U e o segundo é V e o
+// retorno é uma intersecção dos 2 tipos
+var result2 = merge({ name2: 'Johnxx' }, { jobTitle2: 'Frontend Developerxx' });
+console.log(JSON.stringify(result2)); //{"name2":"Johnxx","jobTitle2":"Frontend Developerxx"}
+/// Classe genéricas
+//////////////////////
+var IdentityClass = /** @class */ (function () {
+    function IdentityClass(value) {
+        this.value = value;
+    }
+    IdentityClass.prototype.getIdentity = function () {
+        return this.value;
+    };
+    return IdentityClass;
+}());
+var myNumberClass = new IdentityClass(12);
+console.log(myNumberClass.getIdentity()); // 1
+var myStringClass = new IdentityClass("Hellos!");
+console.log(myStringClass.getIdentity()); // Hello!
+var inferindo = new IdentityClass("gatos");
+console.log(inferindo.getIdentity()); // gato
+console.log(typeof inferindo.getIdentity()); //string
