@@ -1,15 +1,12 @@
 var Person = /** @class */ (function () {
-    // ssn: string;
-    // firstName: string;
-    // lastName: string;
-    //constructor(ssn: string, firstName: string, lastName: string) {
     function Person(ssn, firstName, lastName) {
+        /** Não entendi por que mas declarando os argumentos do construtor como private não precisou declarar
+         * aws variáveis acima nem os this. abaixo
+         */
+        // constructor(private ssn: string, private firstName: string, private lastName: string) {        
         this.ssn = ssn;
         this.firstName = firstName;
         this.lastName = lastName;
-        // this.ssn = ssn;
-        // this.firstName = firstName;
-        // this.lastName = lastName;
     }
     Person.prototype.getFullName = function () {
         return "".concat(this.firstName, " ").concat(this.lastName);

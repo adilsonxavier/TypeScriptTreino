@@ -22,6 +22,7 @@ class Person {
 
 let person = new Person();
 person.age = 10; //setter
+person.age = 1000; 
 
 person.age = 0;
 
