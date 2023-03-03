@@ -24,7 +24,7 @@ function merge2<U extends object, V extends object>(obj1: U, obj2: V) {
     };
 }
 
-// Aqui o método merge usou inferência para saber que o primeiro parâmetro é um objetod do tipi  U e o segundo é
+// Aqui o método merge usou inferência para saber que o primeiro parâmetro é um objetod do tipo  U e o segundo é
 // do tipo  V e o // retorno é uma intersecção dos 2 tipos
 // Contudo ele aceita que um dos parâmetros não seja um objeto:
 let person = merge2(
